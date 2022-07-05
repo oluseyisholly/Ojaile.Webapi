@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ojaile.Abstraction\Ojaile.Abstraction.csproj" />
+    <ProjectReference Include="..\Ojaile.Core1\Ojaile.Core1.csproj" />
+    <ProjectReference Include="..\Ojaile.Data\Ojaile.Data.csproj" />
+  </ItemGroup>
+
+</Project>
