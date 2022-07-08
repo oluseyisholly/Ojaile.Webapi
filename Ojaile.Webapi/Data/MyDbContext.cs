@@ -17,8 +17,8 @@ namespace Ojaile.Webapi.Data
         {
             base.OnModelCreating(builder);
             builder.Entity<Country>(c =>
-            {
-                c.HasKey(p => p.Id);
+            { 
+                c.HasKey(p => p.Id); 
             });
         }
     }

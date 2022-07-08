@@ -175,7 +175,7 @@ namespace Ojaile.Webapi.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
-                table: "AspNetRoleClaims",
+                table: "AspNetRoleClaims", 
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(

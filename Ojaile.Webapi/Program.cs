@@ -17,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddSingleton<IPropertyItemService, IPropertyItemService>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/as pnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddLogging();
