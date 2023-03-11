@@ -12,7 +12,7 @@ namespace Ojaile.Webapi.Migrations
 {
     [DbContext(typeof(MyDbContext))]
     partial class MyDbContextModelSnapshot : ModelSnapshot
-    { 
+    {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
@@ -171,7 +171,7 @@ namespace Ojaile.Webapi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries");
+                    b.ToTable("Countries", (string)null);
                 });
 
             modelBuilder.Entity("Ojaile.Webapi.Models.ApplicationUser", b =>

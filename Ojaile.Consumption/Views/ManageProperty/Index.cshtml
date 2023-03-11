@@ -1,0 +1,73 @@
+﻿@model PropertyItemComponents
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h2>@ViewData["RegisteredName"]  </h2>
+    <div class="row col-12">
+    <div class="col-6">
+    <table>
+    <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <thead>
+    </thead>
+
+
+    <tbody>
+     @if (Model.Properties!=null){
+         foreach(var itm in Model.Properties)
+                {
+                   <tr>
+                   <td>@itm.PropertyName </td>
+                   <td>@itm.PropertyDecription </td>
+                   <td>@itm.Address</td>
+                   <td>@Html.ActionLink("Edit", "EditPropertyItem", new {Id = itm.Id})</td>
+                   <td>@Html.ActionLink("Delete", "DeletePropertyItem", new{Id = itm.Id})</td>
+                   <td>@Html.ActionLink("Add Image", "Index", "ManagePropertyImage", new{Id = itm.Id})</td>
+                   </tr>
+                }
+     }
+    </tbody>
+
+
+    <tfoot></tfoot>
+    </table>
+    </div>
+     <div class="col-6">
+     <form class="horizontal-form" asp-action="CreatePropertyItem">
+
+    <div class="form-group">
+    <label>Property Name</label>
+    <input type="text" required asp-for="Property.PropertyName" class="form-control"/>
+    <span asp-validation-for="Property.PropertyName"></span>
+    </div>
+     <div class="form-group">
+       <label>Description</label>
+     <input type="text" required asp-for="Property.PropertyDecription"  class="form-control"/>
+      <span asp-validation-for="Property.PropertyDecription"></span>
+     </div>
+     <div class="form-group">
+       <label>Address</label>
+     <input type="text" required asp-for="Property.Address" class="form-control"/>
+      <span asp-validation-for="Property.Address"></span>
+     </div>
+
+      <div class="form-group">
+      <label>Address</label>
+     <select type="text" required asp-for="Property.PropertyTypeId" asp-items = "ViewBag.PropertyType" class="form-control"></select>
+      <span asp-validation-for="Property.Address"></span>
+     </div>
+    
+     <hr/>
+     <div class="form-group">
+     <input type="submit" value="Add Property"/></div>
+     </form>
+
+    </div></div>
+}
+

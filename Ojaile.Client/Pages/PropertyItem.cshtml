@@ -1,0 +1,29 @@
+﻿@page
+@model Ojaile.Client.Pages.PropertyItemModel
+@{
+
+    <h2> @ViewData["RegisteredName"]</h2>
+    
+            <table>
+                <thead>
+                    <th>PropertyName</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Created</th>
+                </thead>
+           
+                <tbody>
+                @foreach(var itm in Model.getPropertyItems())
+                {
+                    <tr>
+                        <td>@itm.PropertyName </td>
+                        <td>@itm.Address</td>
+                        <td>@itm.PropertyType</td>
+                        <td>@itm.Created.ToString()</td>
+                    </tr>
+                }
+                </tbody>
+               <tfoot></tfoot>
+            </table>
+       
+}

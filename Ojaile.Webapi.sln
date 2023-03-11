@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ojaile.Webapi", "Ojaile.Webapi\Ojaile.Webapi.csproj", "{7256B1DB-9F0A-434F-8D25-947FF04293C5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58AB501C-FE48-4731-B30F-6D4F84C8F87F} = {58AB501C-FE48-4731-B30F-6D4F84C8F87F}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A45EC277-FCC2-4E88-823C-AFC39174B252}"
 EndProject
@@ -27,7 +30,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ojaile.Abstraction", "Ojail
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ojaile.Facade", "Ojaile.Facade\Ojaile.Facade.csproj", "{D66FE052-3390-430A-9630-EC04C7F3A665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ojaile.Client", "Ojaile.Client\Ojaile.Client.csproj", "{D67D2198-8FCE-495C-9FC6-7C355C5473BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ojaile.Client", "Ojaile.Client\Ojaile.Client.csproj", "{D67D2198-8FCE-495C-9FC6-7C355C5473BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{0657D009-79C8-4AA5-9E2D-BBD8404D8002}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ojaile.Consumption", "Ojaile.Consumption\Ojaile.Consumption.csproj", "{79DF9A1C-3D00-4F00-A868-A1009104C0A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +66,10 @@ Global
 		{D67D2198-8FCE-495C-9FC6-7C355C5473BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D67D2198-8FCE-495C-9FC6-7C355C5473BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D67D2198-8FCE-495C-9FC6-7C355C5473BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79DF9A1C-3D00-4F00-A868-A1009104C0A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79DF9A1C-3D00-4F00-A868-A1009104C0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79DF9A1C-3D00-4F00-A868-A1009104C0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79DF9A1C-3D00-4F00-A868-A1009104C0A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +81,7 @@ Global
 		{E09286FB-7A5B-4212-AB70-C7BC050843D6} = {9BEA4394-55B9-4865-A1A8-1BE5CF136AED}
 		{D66FE052-3390-430A-9630-EC04C7F3A665} = {9BEA4394-55B9-4865-A1A8-1BE5CF136AED}
 		{D67D2198-8FCE-495C-9FC6-7C355C5473BA} = {8949C12E-5F7B-409E-97D2-3267848B56E2}
+		{79DF9A1C-3D00-4F00-A868-A1009104C0A7} = {0657D009-79C8-4AA5-9E2D-BBD8404D8002}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {17A3D8EA-17D3-4167-9145-2B4C61826BFB}

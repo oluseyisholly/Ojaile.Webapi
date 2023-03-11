@@ -1,0 +1,77 @@
+﻿@page
+@model Ojaile.Client.Pages.Shared.RegisterModel
+
+    <h2> @ViewData["RegisteredName"]</h2>
+    <div class="row col-12">
+        <div class = "col-6">
+            <table>
+                <thead>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Created</th>
+                </thead>
+           
+                <tbody>
+                @foreach(var itm in Model.Users())
+                {
+                    <tr>
+                        <td>@itm.FirstName @itm.LastName</td>
+                        <td>@itm.Email</td>
+                        <td>@itm.PhoneNumber</td>
+                        <td>@itm.Created.ToString("dd mm yyyy")</td>
+                    </tr>
+                }
+                </tbody>
+               <tfoot></tfoot>
+            </table>
+        </div>
+
+        <div class="col-6">
+    <form class="horizontal-form" asp-action=" post">
+            <div class = "form-group"> 
+                <Label> First Name</Label>
+                <input type = "text" required asp-for = "RegisterView.FirstName"  class = "form-control"></input>
+                <span asp-validation-for="RegisterView.FirstName"></span>
+            </div>
+            <div class= "form-group">
+                <Label>Last Name</Label>
+                <input type = "text" required  asp-for = "RegisterView.LastName"  class="form-control"></input>
+                <span asp-validation-for="RegisterView.LastName"></span>
+            </div>
+             <div class= "form-group">
+                <Label>User Name</Label>
+                <input type = "text" required  asp-for = "RegisterView.UserName"  class="form-control"></input>
+                <span asp-validation-for="RegisterView.UserName"></span>
+            </div>
+             <div class= "form-group">
+                <Label>Email</Label>
+                <input type = "email" required  asp-for = "RegisterView.Email"  class="form-control"></input>
+                <span asp-validation-for="RegisterView.Email"></span>
+            </div>
+             <div class= "form-group">
+                <Label>Phone Number</Label>
+                <input type = "text" required  asp-for = "RegisterView.PhoneNumber"  class="form-control"></input>
+                <span asp-validation-for="RegisterView.PhoneNumber"></span>
+            </div>
+            <div class= "form-group">
+                <Label>Password</Label>
+                <input type = "password" required  asp-for = "RegisterView.Password"  class="form-control">
+                <span asp-validation-for="RegisterView.Password"></span>
+            </div>
+             <div class= "form-group">
+                <Label> Confirm Password</Label>
+                <input type = "password" required  asp-for = "RegisterView.confirmpassword"  class="form-control"></input>
+                <span asp-validation-for="RegisterView.confirmpassword"></span>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <input type = "submit" value = "Submit Data"/>
+            </div>
+
+           
+    </Form>
+    </div>
+    </div>
+
+<partial name = "_ValidationScriptsPartial"/>

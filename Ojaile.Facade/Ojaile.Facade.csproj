@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.3.0" />
+    <PackageReference Include="MimeKit" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Ojaile.Abstraction\Ojaile.Abstraction.csproj" />
     <ProjectReference Include="..\Ojaile.Core1\Ojaile.Core1.csproj" />
     <ProjectReference Include="..\Ojaile.Data\Ojaile.Data.csproj" />

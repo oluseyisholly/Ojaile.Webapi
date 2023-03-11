@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model PropertyItemComponents
+@{
+    <form class="horizontal-form" asp-controller="ManagePropertyImage" asp-action="AddImage" enctype="multipart/form-data">
+        
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Upload product file</label>
+            <input asp-for="image.PropertyMedia" class="form-control form-control-sm" id="formFileSm">
+        </div>
+        
+        <div class="form-group">
+            <label>Property Name</label>
+            <input type="text" required asp-for="Property.Id" class="form-control"/>
+            <span asp-validation-for="Property.Id"></span>
+        </div>
+        @if (false)
+        {
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" asp-for="image.PropertyMedia" class="form-control-file" id="exampleFormControlFile1">
+          </div>   
+        }
+       
+       
+        <div class="form-group">
+            <input type="submit" value="Add Image"/>
+        </div>
+     </form>
+     
+}

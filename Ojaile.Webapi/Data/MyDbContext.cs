@@ -11,15 +11,17 @@ namespace Ojaile.Webapi.Data
         {
 
         }
-        public DbSet<Country> Countries { get; set; }
+        //public DbSet<Country> Countries { get; set; }
+        //public DbSet<PropertyItem> propertyItems { get; set; }
+        //public DbSet<PropertyType> propertyTypes { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            builder.Entity<Country>(c =>
-            { 
-                c.HasKey(p => p.Id); 
-            });
-        }
+        //protected override void OnModelCreating(ModelBuilder builder)
+        //{
+        //    base.OnModelCreating(builder);
+        //    builder.Entity<Country>(c =>
+        //    { 
+        //        c.HasKey(p => p.Id); 
+        //    });
+        //}
     }
 }

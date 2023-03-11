@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Ojaile.Client.Data;
 using Ojaile.Client.Model;
 
+
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer(connectionString));

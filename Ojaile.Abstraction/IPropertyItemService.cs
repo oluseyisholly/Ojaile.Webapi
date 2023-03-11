@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ojaile.Data.DBModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,15 @@ namespace Ojaile.Abstraction
 {
     public interface IPropertyItemService
     {
-        void SavePropertyItem();
-        void DeletePropertyItem();
-        void UpdatePropertyItem(string name, object Value);
-        object GetPropertyItemBtName(string name);
-        object GetValue(string name, object defaultValue);
-        object GetPropertyItemId(int Id);
-        List<object> GetPropertyItem();
+        void SavePropertyItem(PropertyItem value);
+        void DeletePropertyItem(int Id);
+        void UpdatePropertyItem(int Id, PropertyItem Value);
+        PropertyItem GetPropertyItemBtName(string name);
+        PropertyItem GetValue(string name, PropertyItem defaultValue);
+        PropertyItem GetPropertyItemId(int Id);
+        List<PropertyItem> GetPropertyItem();
+        List<PropertyItem> GetPropertyItemByUserId(string userId);
+        List<PropertyItem> SearchpropertyItem(string querystring);
 
     }
 }
